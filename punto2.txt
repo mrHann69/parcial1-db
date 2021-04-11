@@ -1,0 +1,4 @@
+/*
+Punto 2
+Transforme el modelo anterior al modelo relacional. Especifique llaves primarias y foráneas.
+*/
