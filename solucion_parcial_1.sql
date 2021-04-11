@@ -33,6 +33,7 @@ intersect
  * Punto 4
  * jujujujujujuju
  */
+ select cod_facultad, avg(SUELDO) as salario_promedio from profe group by cod_facultad;
 
 
 /*
