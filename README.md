@@ -4,6 +4,7 @@ The answers for the first partial exam from the Databases course
 
 ### Punto 1
 * Modelo E-R.
+![modeloER](imgs/punto-uno-p1.jpg "modelo ER")
 
 ### Punto 2
 * Modelo Relacional ( especificando llaves primarias y foráneas )
@@ -11,6 +12,10 @@ The answers for the first partial exam from the Databases course
 Libro ( PK(ISBN), titulo, year_publication, idioma, resumen, FK(sub_area_conocimiento), num_paginas, Autor, FK(Editorial))
   FK: sub_area_conocimiento REFERENCE A Codigo EN Sub_Area
   FK: Editorial REFERENCE A Codigo EN Editorial
+
+Libros_Prestamo (FK(Num_Prestamo), FK(Libro_Prestamo))
+  FK: Num_Prestamo REFERENCE A núm_consecutivo EN Préstamo_físico
+  FK: Libro_Prestamo REFERENCE A ISBN EN Libro
 
 Libro_Fisico ( PK(num_ejemplar), ubicación)
 
@@ -22,7 +27,7 @@ Editorial ( PK(codigo), Nombre, Pagina_web, Pais_Origen )
 
 Area_conocimiento ( PK(Codigo), Nombre, Descripción )
 
-Sub_Area ( PK(codigo), Nombre, FK(Area_conocimiento) )
+Sub_Areas ( PK(codigo), Nombre, FK(Area_conocimiento) )
   FK: Area_conocimiento REFERENCE A Codigo EN Area_conocimiento
 
 Autor_Libro (FK(Codigo_autor), FK(ISBN_Libro) )

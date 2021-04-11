@@ -5,6 +5,10 @@ Libro ( PK(ISBN), titulo, year_publication, idioma, resumen, FK(sub_area_conocim
   FK: sub_area_conocimiento REFERENCE A Codigo EN Sub_Area
   FK: Editorial REFERENCE A Codigo EN Editorial
 
+Libros_Prestamo (FK(Num_Prestamo), FK(Libro_Prestamo))
+  FK: Num_Prestamo REFERENCE A núm_consecutivo EN Préstamo_físico
+  FK: Libro_Prestamo REFERENCE A ISBN EN Libro
+
 Libro_Fisico ( PK(num_ejemplar), ubicación)
 
 Libro_Digital ( Url, Formato_Archivo, Tamaño)
@@ -15,7 +19,7 @@ Editorial ( PK(codigo), Nombre, Pagina_web, Pais_Origen )
 
 Area_conocimiento ( PK(Codigo), Nombre, Descripción )
 
-Sub_Area ( PK(codigo), Nombre, FK(Area_conocimiento) )
+Sub_Areas ( PK(codigo), Nombre, FK(Area_conocimiento) )
   FK: Area_conocimiento REFERENCE A Codigo EN Area_conocimiento
 
 Autor_Libro (FK(Codigo_autor), FK(ISBN_Libro) )
