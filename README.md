@@ -4,6 +4,9 @@ The answers for the first partial exam from the Databases course
 
 ### Punto 1
 * Modelo E-R.
+
+### Punto 2
+* Modelo Relacional ( especificando llaves primarias y foráneas )
 ```
 Libro ( PK(ISBN), titulo, year_publication, idioma, resumen, FK(sub_area_conocimiento), num_paginas, Autor, FK(Editorial))
   FK: sub_area_conocimiento REFERENCE A Codigo EN Sub_Area
@@ -47,8 +50,6 @@ Multa ( PK(ID), FK(usuario_generador), fecha, valor_multa, descripción )
 Solicitud ( PK(núm), fecha, descripcion, FK(usuario), ISBN, titulo)
   FK: usuario REFERENCE A identificación EN Usuario
 ```
-### Punto 2
-* Modelo Relacional ( especificando llaves primarias y foráneas )
 
 ### Punto 3
 * Dados los siguientes esquemas, escribir las consultas en Algebra Relacional.
