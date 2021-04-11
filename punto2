@@ -1,0 +1,38 @@
+párrafo 1
+
+Libro (ISBN, titulo, year_publication, idioma, resumen, Area_conocimiento, num_paginas, Autor, Editorial)
+
+Libro_Fisico ( num_ejemplar, ubicación)
+
+Libro_Digital ( Url, Formato_Archivo, Tamaño)
+
+Autor (Codigo, Primer_Apellido, Segundo_Apellido, Primer_Nombre, Segundo_Nombre )
+
+Editorial ( codigo, Nombre, Pagina_web, Pais_Origen )
+
+Area_conocimiento ( codigo, Nombre, Descripción )
+
+Sub_Area ( codigo, Nombre, Area_conocimiento)
+
+
+párrafo 2
+
+usuario ( identificación, nombre, dirección, teléfono, email )
+
+estudiante ( carrera, universidad)
+
+profesor ( departamento, titulo, área)
+
+préstamo_físico ( núm_consecutivo, fecha_inicio, fecha_fin, pedido, tendero )
+
+préstamo_digital ( usuario, fecha, hora, dir_IP)
+
+empleado ( identificación, nombre, cargo )
+
+multa (usuario_generador, fecha, valor_multa, descripción )
+
+
+
+párrafo 3
+
+solicitud ( núm, fecha, descripcion, usuario, ISBN, titulo)

@@ -1,0 +1,31 @@
+
+
+
+párrafo 2
+
+usuario ( identificación, nombre, dirección, teléfono, email )
+
+estudiante ( carrera, universidad)
+
+profesor ( departamento, titulo, área)
+
+préstamo_físico ( núm_consecutivo, fecha_inicio, fecha_fin, pedido, tendero )
+
+préstamo_digital ( usuario, fecha, hora, dir_IP)
+
+empleado ( identificación, nombre, cargo )
+
+multa (usuario_generador, fecha, valor_multa, descripción )
+
+
+
+párrafo 3
+
+solicitud ( núm, fecha, descripcion, usuario, ISBN, titulo)
+
+
+
+
+
+
+

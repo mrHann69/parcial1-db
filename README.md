@@ -1,5 +1,5 @@
 # Parcial 1
-*Description*
+*Description*\
 The answers for the first partial exam from the Databases course
 
 ### Punto 1
@@ -10,6 +10,6 @@ The answers for the first partial exam from the Databases course
 
 ### Punto 3
 * Dados los siguientes esquemas, escribir las consultas en Algebra Relacional.
-![punto3](imgs/p3.jpeg)
+![punto3](imgs/p3.jpeg "Queries")
 
 ### Punto 4
