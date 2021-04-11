@@ -60,8 +60,7 @@ Solicitud ( PK(núm), fecha, descripcion, FK(usuario), ISBN, titulo)
 * Dados los siguientes esquemas, escribir las consultas en Algebra Relacional.
 ![punto3](imgs/p33.jpeg "Queries")
 
-  3.1 Obtener el nombre y categoría de los usuarios que usan programas cuyo precio es mayor
-a 5000.
+  3.1 Obtener el nombre y categoría de los usuarios que usan programas cuyo precio es mayor a 5000.
     ![3.1](imgs/3.1.jpeg)
     ```
     $ T_1 := Usuarios \Join Usan $ \
