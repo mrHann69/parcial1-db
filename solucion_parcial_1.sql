@@ -1,6 +1,6 @@
 /*
  * @Autores :
- *Santiago Ramirez
+ *Santiago Ramirez Ospina
  *Franco L. Matheo
 */
 
@@ -14,9 +14,11 @@
 
 --punto 2
 --Código y nombre de asignaturas que se programaron en el periodo 2014-1 en el plan de Medicina
-select a.cod_a, a.nom_asig --, a.plan_id, p.periodo
+select a.cod_a, a.nom_asig, a.plan_id
 from asignatura a, programacion p
-where a.plan_id = 3 and p.periodo = '2014-1';
+where a.plan_id = 3
+and p.periodo = '2014-1'
+and a.cod_a = p.cod_a ;
 
 
 /*
@@ -29,12 +31,11 @@ intersect
 (select a.COD_A, NOM_ASIG from ASIGNATURA a, programacion p where COD_P in (select COD_P from profe where CODCAT='4') and
                                                             a.COD_A=p.COD_A group by a.COD_A, NOM_ASIG);
 
-/*
- * Punto 4
- * jujujujujujuju
- */
- select cod_facultad, avg(SUELDO) as salario_promedio from profe group by cod_facultad;
-
+--Punto 4
+--El salario promedio de los profesores agrupados por facultad
+ select p.cod_facultad, avg(sueldo)  as salario_promedio
+ from profe p
+ group by p.cod_facultad;
 
 /*
  * Punto 5
@@ -48,9 +49,11 @@ except
 -- punto 6
 --Código y nombre de profesores que dictaron asignaturas de más de 3 créditos en el
 --periodo 2013-1
-select DISTINCT p.cod_p, p.nom_prof --, p2.periodo, a.creditos
+select p.cod_p, p.nom_prof , p2.periodo, a.creditos
 from profe p,asignatura a, programacion p2
-where a.creditos > 3 and p2.periodo ='2013-1';
+where a.creditos > 3 and p2.periodo ='2013-1'
+and p.cod_p = p2.cod_p
+and p2.cod_a = a.cod_a ;
 
 
 /*
@@ -67,6 +70,8 @@ where COD_P in (select COD_P from PROFE where CODCAT in ('1', '2')) and
 select distinct a.cod_a , a.nom_asig, p2.codcat
 from asignatura a, programacion p, profe p2
 where p2.codcat != '1'
+and a.cod_a = p.cod_a
+and p.cod_p = p2.cod_p
 order by p2.codcat ;
 
 
@@ -86,4 +91,8 @@ except
 --Código y Nombre de Profesores de la facultad de Ingeniería que dieron alguna asignatura de la facultad de salud
 select distinct p.cod_p, p.nom_prof, p.cod_facultad
 from profe p, programacion p2, asignatura a, plan p3
-where p.cod_facultad = 'ing' and a.plan_id = 3;
+where p.cod_facultad = 'ing'
+and a.plan_id = 3
+and p.cod_p = p2.cod_p
+and p2.cod_a = a.cod_a
+and a.plan_id = p3.plan_id;
