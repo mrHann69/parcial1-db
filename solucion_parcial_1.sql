@@ -69,7 +69,7 @@ where COD_P in (select COD_P from PROFE where CODCAT in ('1', '2')) and
 --Código y nombre de asignaturas que han dado profesores de categoría 2 o categoría 3 pero no los de la categoría 1
 select distinct a.cod_a , a.nom_asig, p2.codcat
 from asignatura a, programacion p, profe p2
-where p2.codcat != '1'
+where p2.codcat = '2' or p2.codcat = '3'
 and a.cod_a = p.cod_a
 and p.cod_p = p2.cod_p
 order by p2.codcat ;
