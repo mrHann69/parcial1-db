@@ -61,7 +61,8 @@ Solicitud ( PK(núm), fecha, descripcion, FK(usuario), ISBN, titulo)
 ![punto3](imgs/p33.jpeg "Queries")
 
   3.1 Obtener el nombre y categoría de los usuarios que usan programas cuyo precio es mayor a 5000.
-    ![3.1](imgs/3.1.jpeg)
+
+    ![3.1](imgs/3.1.jpeg "punto 3.1")
     ```
     $ T_1 := Usuarios \Join Usan $ \
     $ T_2 := T_1 \Join_{Programas.CodP = T_1.CodP} Programas $ \
@@ -70,16 +71,17 @@ Solicitud ( PK(núm), fecha, descripcion, FK(usuario), ISBN, titulo)
     ```
 
   3.2 Mostrar el código y nombre de los usuarios que no usan programas del SO Linux
-    ![3.2](imgs/3.2.jpeg)
+
+    ![3.2](imgs/3.2.jpeg "punto 3.2")
     ```
     $ T_1 := Usuarios \Join usan $\
     $ T_2 := T_1 \Join_{programas.CodP = T1.CodP} (Programas) $\
     $ T_3 := \prod_{usuario.CodU, usuario.nombre, SO.nombre}(T_2 \Join_{T_2.CodS=OS.CodS} SO)$\
     $ R := \prod_{T_3.nombre, T_3.CodU}(T_3 - \sigma_{T_3.nombreOS = 'Linux'}(T_3)) $
     ```
-  3.3 Obtener el nombre de los programas y su respectivo SO que son utilizados por usuarios
-de categoría “Dummies” y “Senior”
-    ![3.3](imgs/3.3.jpeg)
+  3.3 Obtener el nombre de los programas y su respectivo SO que son utilizados por usuarios de categoría “Dummies” y “Senior”
+
+    ![3.3](imgs/3.3.jpeg "punto 3.3")
     ```
     $ T_1 := \sigma_{Categoria=´Dummies´ \vee  Categoria='Senior'} (SO) $ \
     $ T_2 := T_1 \Join (Usan) $ \
@@ -88,7 +90,8 @@ de categoría “Dummies” y “Senior”
     $ R := \prod_{Programa.Nombre, SO.Nombre} (T_4) $
     ```
   3.4 Mostrar los programas que son usados por todos los usuarios.
-    ![3.4](imgs/3.4.jpeg)
+
+    ![3.4](imgs/3.4.jpeg "punto 3.4")
     ```
     $ T_1 := Usan \Join_{programa.CodP = Usan.CodP}(Programas) $\
     $ R := \prod_{programa.CodP, programa.Nombre, programa.Precio, programa.CodS}(T_1)$
