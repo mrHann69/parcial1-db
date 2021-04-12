@@ -1,9 +1,10 @@
 # Parcial 1
-*Description*\
-The answers for the first partial exam from the Databases course
+*Descripción*\
+Respuestas parte practica primer examen parcial del curso de bases de datos.
+
 **participantes**
-Ramirez O. Santiago - 1841391 - 2711
-Franco L. Matheo - 1830665 - 2711
+* Ramirez O. Santiago - 1841391 - 2711
+* Franco L. Matheo - 1830665 - 2711
 
 
 ### Punto 1
